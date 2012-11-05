@@ -24,9 +24,9 @@ require 'json'
 
 desc 'bump version'
 task :bump_version do
-  version = open('VERSION').read.chomp.to_f
+  version = open('VERSION').read.chomp.to_i
   open('VERSION', 'w') { |f|
-    f.puts version + 0.1
+    f.puts version + 1
   }
 end
 
