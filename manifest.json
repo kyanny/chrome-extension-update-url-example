@@ -2,12 +2,12 @@
     "name":"Hello Extension",
     "version":"1.0",
     "description":"Hello Extension is for testing auto update",
-    "icons":{"128":""},
+    "icons":{"128":"potato.jpeg"},
     "background_page":"bg.html",
     "permissions":["http://*", "https://*"],
     "browser_action":{
         "default_title":"サンプル",
-        "default_icon":"",
+        "default_icon":"potato.jpeg",
         "popup":"popup.html"
     }
 }
