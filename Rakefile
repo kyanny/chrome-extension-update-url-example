@@ -1,7 +1,7 @@
 @crxmake = 'crxmake'
-@pack_extension = File.dirname(__FILE__)
-@extension_output = File.dirname(__FILE__)
-@pack_extension_key = 'hello.pem'
+@pack_extension = 'extension'
+@extension_output = 'extension.crx'
+@pack_extension_key = 'extension.pem'
 
 desc 'package'
 task :package do
