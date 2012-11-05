@@ -3,6 +3,7 @@ GEM
   specs:
     crxmake (2.0.7)
       zip (~> 2.0.2)
+    json (1.7.5)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -18,4 +19,5 @@ PLATFORMS
 
 DEPENDENCIES
   crxmake
+  json
   sinatra
