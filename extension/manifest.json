@@ -8,5 +8,6 @@
         "default_title":"サンプル",
         "default_icon":"potato.jpeg",
         "popup":"popup.html"
-    }
+    },
+    "update_url":"http://localhost:9292/hello/updates.xml"
 }
