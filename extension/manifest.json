@@ -1,6 +1,6 @@
 {
   "name": "Hello Extension",
-  "version": "7",
+  "version": "1",
   "description": "Hello Extension is for testing auto update",
   "icons": {
     "128": "potato.jpeg"
@@ -10,7 +10,7 @@
     "https://*"
   ],
   "browser_action": {
-    "default_title": "7",
+    "default_title": "1",
     "default_icon": "potato.jpeg",
     "popup": "popup.html"
   },

@@ -47,4 +47,9 @@ task :package do
   sh "#{@crxmake} --pack-extension=#{@pack_extension} --extension-output=#{@extension_output} --pack-extension-key=#{@pack_extension_key}"
 end
 
+desc 'clean'
+task :clean do
+  rm 'extension.crx'
+end
+
 task :default => [:bump_version, :manifest, :package]
