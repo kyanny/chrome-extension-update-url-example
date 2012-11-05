@@ -32,7 +32,7 @@ end
 
 desc 'manifest'
 task :manifest do
-  open('extension/manifest.json') { |f|
+  open('extension/manifest.json', 'w') { |f|
     f.puts @manifest.to_json
   }
 end
@@ -42,4 +42,4 @@ task :package do
   sh "#{@crxmake} --pack-extension=#{@pack_extension} --extension-output=#{@extension_output} --pack-extension-key=#{@pack_extension_key}"
 end
 
-task :default => :bump_version, :manifest, :package
+task :default => [:bump_version, :manifest, :package]

@@ -1,13 +1,1 @@
-{
-    "name":"Hello Extension",
-    "version":"1.1",
-    "description":"Hello Extension is for testing auto update",
-    "icons":{"128":"potato.jpeg"},
-    "permissions":["http://*", "https://*"],
-    "browser_action":{
-        "default_title":"サンプルxxxxxxxxxxxxxxxxx",
-        "default_icon":"potato.jpeg",
-        "popup":"popup.html"
-    },
-    "update_url":"http://localhost:9292/hello/updates.xml"
-}
+{"name":"Hello Extension","version":"1.1","description":"Hello Extension is for testing auto update","icons":{"128":"potato.jpeg"},"permissions":["http://*","https://*"],"browser_action":{"default_title":"1.1","default_icon":"potato.jpeg","popup":"popup.html"},"update_url":"http://localhost:9292/hello/updates.xml"}
