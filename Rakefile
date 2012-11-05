@@ -33,7 +33,7 @@ end
 desc 'manifest'
 task :manifest do
   open('extension/manifest.json', 'w') { |f|
-    f.puts @manifest.to_json
+    f.puts JSON.pretty_generate @manifest
   }
 end
 
