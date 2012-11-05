@@ -1,20 +1,24 @@
 # -*- coding: utf-8 -*-
 require 'json'
 
-@version = open('VERSION').read.chomp
+def get_version
+  open('VERSION').read.chomp
+end
 
-@manifest = {
-  name: "Hello Extension",
-  version: @version.to_s,
-  description: "Hello Extension is for testing auto update",
-  icons: {"128" => "potato.jpeg" },
-  permissions: ["http://*", "https://*"],
-  browser_action: {
-    default_title: @version.to_s,
-    default_icon: "potato.jpeg",
-    popup: "popup.html",
-  },
-  update_url:"http://localhost:9292/hello/updates.xml",
+@manifest = lambda {
+  {
+    name: "Hello Extension",
+    version: get_version,
+    description: "Hello Extension is for testing auto update",
+    icons: {"128" => "potato.jpeg" },
+    permissions: ["http://*", "https://*"],
+    browser_action: {
+      default_title: get_version,
+      default_icon: "potato.jpeg",
+      popup: "popup.html",
+    },
+    update_url:"http://localhost:9292/hello/updates.xml",
+  }
 }
 
 @crxmake = 'crxmake'
@@ -34,7 +38,7 @@ end
 desc 'manifest'
 task :manifest do
   open('extension/manifest.json', 'w') { |f|
-    f.puts JSON.pretty_generate @manifest
+    f.puts JSON.pretty_generate @manifest.call
   }
 end
 
