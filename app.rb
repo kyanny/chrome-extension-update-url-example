@@ -5,7 +5,7 @@ get '/:appname/updates.xml' do
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='cmemcpocaaejgcdonnbbgcdcnnhjagah'>
-    <updatecheck codebase='http://localhost:9292/hello/extension.crx' version='1.1' />
+    <updatecheck codebase='http://localhost:9292/hello/extension.crx' version='#{open("VERSION").read.chomp.to_i}' />
   </app>
 </gupdate>
 XML
